@@ -1,3 +1,5 @@
+//Javascript/JQuery//
+
 var quiz = [
 {
     "question": "What is the full form of IP?",
