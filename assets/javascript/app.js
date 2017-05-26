@@ -23,12 +23,37 @@ var quiz = [
     "question": "What does CC mean in emails?",
     "choices": ["Carbon Copy", "Creative Commons", "other"],
     "correct": "Carbon Copy"
+},
+{
+    "question": "What year was Facebook founded?",
+    "choices": ["2004", "2006", "2001"],
+    "correct": "2004"
+},
+{
+    "question": "The companies HP, Microsoft and Apple were all started in a what?",
+    "choices": ["Barn", "Trailer", "Garage"],
+    "correct": "Garage"
+},
+{
+    "question": "What is the name of the main protagonist in the Legend of Zelda series of video games?",
+    "choices": ["Cage", "Zelda", "Link"],
+    "correct": "Link"
+},
+{
+    "question": "Fonts that contain small decorative lines at the end of a stroke are known as what?",
+    "choices": ["Arial", "Serif", "Verdana"],
+    "correct": "Serif"
+},
+{
+    "question": "In what year was the iPhone first released?",
+    "choices": ["2010", "2005", "2007"],
+    "correct": "2007"
 }
 ];
 
 
 var intervalId;
-var timer = 30;
+var timer = 31;
 
 function run() {
     intervalId = setInterval(decrement, 1000);
@@ -36,7 +61,7 @@ function run() {
 
 function decrement() {
     timer--;
-    $("#gameClock").html("<h2>" + timer + "</h2>");
+    $("#gameClock").html("<h2> Time Left: " + timer + "</h2>");
     if (timer === 0) {
         stop();
         if (askingQuestion) {
@@ -56,6 +81,7 @@ var askingQuestion = false;
 
 
 function askQuestion() {
+    $("#score").html(gameScore);
     askingQuestion = true;
     $("#message").empty();
     $("#question").html("<h3> Q" + (currentQuestion + 1) + ": " + quiz[currentQuestion].question + "</h3>");
@@ -70,7 +96,7 @@ function askQuestion() {
     }
     $("#choices").html(choicesHtml);
     //start timer
-    timer = 30;
+    timer = 31;
     run();
 }
 

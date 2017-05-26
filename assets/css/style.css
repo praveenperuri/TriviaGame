@@ -1,1 +1,26 @@
 /* CSS */
+a {
+	font-weight: bold;
+	font-family: Verdana;
+	font-size: xx-large;
+	color: 	#1D2951;
+	padding: 20px;
+	margin: 30px;
+	
+}
+
+li {
+	font-weight: bold;
+	font-family: Verdana;
+	font-size: large;
+	padding: 20px;
+	margin: 20px;
+}
+
+#score 	{
+	font-weight: bold;
+	font-family: Verdana;
+	font-size: x-large;
+	padding: 20px;
+	margin: 20px;
+}
